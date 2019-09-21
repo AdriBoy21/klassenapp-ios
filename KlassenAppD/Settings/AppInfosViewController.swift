@@ -17,7 +17,7 @@ class AppInfosViewController: UIViewController, UITableViewDelegate, UITableView
     
     var style = Appearances()
     
-    var n1: [String] = ["Appname: KlassenApp", "Bundle-Identifier: \(AppInfoPublic.bundleid!)", "Appversion: \(AppInfoPublic.version) (Build: \(AppInfoPublic.build))", "Website: https://klassenappd.de", "Email-Adresse: mail@klassenappd.de", "Erstveröffentlichung: 19.Juli 2018", "App-Entwickler: Adrian Baumgart", "Datenbank: Firebase Database", "GitHub-Link: https://github.com/AdriBoy21/klassenapp-ios", "© Adrian Baumgart, 2018 - 2019"]
+    var n1: [String] = ["Appname: KlassenApp", "Bundle-Identifier: \(AppInfoPublic.bundleid!)", "Appversion: \(AppInfoPublic.version) (Build: \(AppInfoPublic.build))", "Website: https://klassenappd.de", "Email-Adresse: mail@klassenappd.de", "Erstveröffentlichung: 19.Juli 2018", "App-Entwickler: Adrian Baumgart", "Datenbank: Firebase Database", "© Adrian Baumgart, 2018 - 2019"]
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return n1.count

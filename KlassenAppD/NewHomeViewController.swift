@@ -396,12 +396,12 @@ class NewHomeViewController: UIViewController, UITableViewDelegate, UITableViewD
             self.allHomeEntries.append(homeEntry(title: "Hausaufgaben bis morgen", content: snapshot1.value as! String, sorter: 1))
             
             ref.child("homework").child("Week1").child(homeworkWeekString).observeSingleEvent(of: .value) { (snapshot2) in
-            if homeworkWeekString != "Samstag" && homeworkWeekString != "Sonntag" {
+            /*if homeworkWeekString != "Samstag" && homeworkWeekString != "Sonntag" {
                 self.allHomeEntries.append(homeEntry(title: "Hausaufgaben von heute", content: snapshot2.value as! String, sorter: 2))
             }
             else {
                 self.allHomeEntries.append(homeEntry(title: "Hausaufgaben von heute", content: "Keine Hausaufgaben heute, es ist Wochenende!", sorter: 2))
-                }
+                }*/
                     
                 ref.child("news").child("news1").observeSingleEvent(of: .value) { (snapshot3_1) in
                     ref.child("news").child("newsL").observeSingleEvent(of: .value) { (snapshot3_2) in

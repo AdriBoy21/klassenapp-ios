@@ -89,19 +89,19 @@ class SettingsViewController: UIViewController {
 
     @IBAction func InformationForRequestsAction(_ sender: Any) {
         if #available(iOS 10.0, *) {
-            UIApplication.shared.open(URL(string: "https://github.com/AdriBoy21/klassenapp-ios/wiki/Hausaufgabenanfragen-(de)")!)
+            UIApplication.shared.open(URL(string: "https://klassenappd.de/wiki/hausaufgabenanfragen.html")!)
         }
         else {
-            UIApplication.shared.openURL(URL(string: "https://github.com/AdriBoy21/klassenapp-ios/wiki/Hausaufgabenanfragen-(de)")!)
+            UIApplication.shared.openURL(URL(string: "https://klassenappd.de/wiki/hausaufgabenanfragen.html")!)
         }
     }
     
     @IBAction func PrivacyPolicyBtn(_ sender: Any) {
         if #available(iOS 10.0, *) {
-            UIApplication.shared.open(URL(string: "https://github.com/AdriBoy21/klassenapp-ios/wiki/Privacy-Policy")!)
+            UIApplication.shared.open(URL(string: "https://klassenappd.de/wiki/ios_privacy_policy.html")!)
         }
         else {
-            UIApplication.shared.openURL(URL(string: "https://github.com/AdriBoy21/klassenapp-ios/wiki/Privacy-Policy")!)
+            UIApplication.shared.openURL(URL(string: "https://klassenappd.de/wiki/ios_privacy_policy.html")!)
         }
     }
     
