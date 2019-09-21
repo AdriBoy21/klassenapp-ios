@@ -402,7 +402,7 @@ class NewHomeViewController: UIViewController, UITableViewDelegate, UITableViewD
             else {
                 self.allHomeEntries.append(homeEntry(title: "Hausaufgaben von heute", content: "Keine Hausaufgaben heute, es ist Wochenende!", sorter: 2))
                 }*/
-                    
+                
                 ref.child("news").child("news1").observeSingleEvent(of: .value) { (snapshot3_1) in
                     ref.child("news").child("newsL").observeSingleEvent(of: .value) { (snapshot3_2) in
                         self.allHomeEntries.append(homeEntry(title: "Neuigkeiten", content: "-Administratoren: \(snapshot3_1.value as! String) \n\n-Lehrer: \(snapshot3_2.value as! String)", sorter: 3))
