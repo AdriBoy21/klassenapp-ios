@@ -5,7 +5,8 @@
 //  Created by Adrian Baumgart on 24.09.19.
 //  Copyright © 2019 Adrian Baumgart. All rights reserved.
 //
-import SwiftUI
+#if canImport(SwiftUI)
+    import SwiftUI
 
 @available(iOS 13.0, *)
     struct TimeTableSwiftUIView: View {
@@ -173,4 +174,4 @@ struct singleStunde: Hashable {
     var stunde: String
     var week: String
 }
-
+#endif
