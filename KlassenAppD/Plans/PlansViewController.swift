@@ -8,6 +8,8 @@
 
 import SPStorkController
 import UIKit
+#if canImport(SwiftUI)
+    import SwiftUI
 
 class PlansViewController: UIViewController {
     @IBOutlet var backgroundTitleView: UIView!
@@ -30,7 +32,13 @@ class PlansViewController: UIViewController {
     }
     
     @IBAction func TimeTableBtnAction(_ sender: Any) {
-        presentStork(controller: TimeTableNewViewController())
+        if #available(iOS 13, *) {
+            present(UIHostingController(rootView: TimeTableSwiftUIView()), animated: true, completion: nil)
+            //presentStork(controller: UIHostingController(rootView: TimeTableSwiftUIView()))
+        }
+        else {
+            presentStork(controller: TimeTableNewViewController())
+        }
     }
     
     func presentStork(controller: UIViewController) {
@@ -158,3 +166,4 @@ class PlansViewController: UIViewController {
         super.viewDidLoad()
     }
 }
+#endif

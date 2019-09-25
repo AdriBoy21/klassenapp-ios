@@ -17,6 +17,10 @@
 		3A0F5726207BD0B700D9F701 /* KlassenAppDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F5725207BD0B700D9F701 /* KlassenAppDTests.swift */; };
 		3A0F5731207BD0B700D9F701 /* KlassenAppDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F5730207BD0B700D9F701 /* KlassenAppDUITests.swift */; };
 		3A12FAC42125856700276495 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A12FAC32125856600276495 /* GoogleService-Info.plist */; };
+		3A165A30233A7B0F007C7841 /* TimeTableSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A165A2F233A7B0F007C7841 /* TimeTableSwiftUIView.swift */; };
+		3A165A34233A7DB2007C7841 /* stundenplanColors.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A165A32233A7DB2007C7841 /* stundenplanColors.json */; };
+		3A165A35233A7DB2007C7841 /* stundenplanTimes.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A165A33233A7DB2007C7841 /* stundenplanTimes.json */; };
+		3A165A37233A7EE2007C7841 /* StundenplanClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A165A36233A7EE2007C7841 /* StundenplanClass.swift */; };
 		3A19530622648F95006C4FC5 /* colors.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A19530522648F95006C4FC5 /* colors.json */; };
 		3A1EA23E2326B67E00D3006F /* NewHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1EA23D2326B67D00D3006F /* NewHomeViewController.swift */; };
 		3A2FDB91231EFECC002068FE /* EventsNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2FDB90231EFECC002068FE /* EventsNewViewController.swift */; };
@@ -38,6 +42,7 @@
 		3A82CDE8218E0CC2009DE910 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A82CDE6218E0CC2009DE910 /* Main.storyboard */; };
 		3A8932B7229858FC000E6395 /* PlansViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8932B6229858FC000E6395 /* PlansViewController.swift */; };
 		3AA4A90F21D64FD6000240CC /* AppInfosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA4A90E21D64FD6000240CC /* AppInfosViewController.swift */; };
+		3AAB91A7233B953C005FC0B2 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AAB91A6233B953C005FC0B2 /* SwiftUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3AABCEE7216503FC00395E99 /* MGSwipeTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AABCEE1216503FB00395E99 /* MGSwipeTableCell.m */; };
 		3AABCEE8216503FC00395E99 /* MGSwipeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AABCEE4216503FB00395E99 /* MGSwipeButton.m */; };
 		3AB1BCD622A1B90000A7FCE7 /* UIScrollView+EmptyDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB1BCD522A1B90000A7FCE7 /* UIScrollView+EmptyDataSet.m */; };
@@ -109,6 +114,10 @@
 		3A0FC97222F5CA4900100497 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A0FC97322F5CA4900100497 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A12FAC32125856600276495 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3A165A2F233A7B0F007C7841 /* TimeTableSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableSwiftUIView.swift; sourceTree = "<group>"; };
+		3A165A32233A7DB2007C7841 /* stundenplanColors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stundenplanColors.json; sourceTree = "<group>"; };
+		3A165A33233A7DB2007C7841 /* stundenplanTimes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stundenplanTimes.json; sourceTree = "<group>"; };
+		3A165A36233A7EE2007C7841 /* StundenplanClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StundenplanClass.swift; sourceTree = "<group>"; };
 		3A19530522648F95006C4FC5 /* colors.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = colors.json; sourceTree = "<group>"; };
 		3A1EA23D2326B67D00D3006F /* NewHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHomeViewController.swift; sourceTree = "<group>"; };
 		3A2FDB90231EFECC002068FE /* EventsNewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsNewViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +143,7 @@
 		3A99D713210BAC3B0038CE25 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
 		3A99D728210BAEC40038CE25 /* KlassenAppD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KlassenAppD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AA4A90E21D64FD6000240CC /* AppInfosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfosViewController.swift; sourceTree = "<group>"; };
+		3AAB91A6233B953C005FC0B2 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		3AABCEE1216503FB00395E99 /* MGSwipeTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGSwipeTableCell.m; sourceTree = "<group>"; };
 		3AABCEE2216503FB00395E99 /* MGSwipeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGSwipeButton.h; sourceTree = "<group>"; };
 		3AABCEE3216503FB00395E99 /* MGSwipeTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGSwipeTableCell.h; sourceTree = "<group>"; };
@@ -213,6 +223,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AAB91A7233B953C005FC0B2 /* SwiftUI.framework in Frameworks */,
 				26B178ED3608636E528082D0 /* Pods_KlassenAppD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,6 +299,17 @@
 				3A0F5732207BD0B700D9F701 /* Info.plist */,
 			);
 			path = KlassenAppDUITests;
+			sourceTree = "<group>";
+		};
+		3A165A31233A7DA6007C7841 /* TimeTableNew */ = {
+			isa = PBXGroup;
+			children = (
+				3A165A32233A7DB2007C7841 /* stundenplanColors.json */,
+				3A165A33233A7DB2007C7841 /* stundenplanTimes.json */,
+				3A165A36233A7EE2007C7841 /* StundenplanClass.swift */,
+				3A165A2F233A7B0F007C7841 /* TimeTableSwiftUIView.swift */,
+			);
+			path = TimeTableNew;
 			sourceTree = "<group>";
 		};
 		3A1EA23C2326B57700D3006F /* New_EventView */ = {
@@ -413,6 +435,7 @@
 		3A7E781322F74714007F6BCB /* Plans */ = {
 			isa = PBXGroup;
 			children = (
+				3A165A31233A7DA6007C7841 /* TimeTableNew */,
 				3A8932B6229858FC000E6395 /* PlansViewController.swift */,
 				3A2CB09D226235A1002F0E0A /* TimeTable */,
 				3A2CB09F226235E4002F0E0A /* Food */,
@@ -460,6 +483,7 @@
 		64D6A311B6B4396E06BF2533 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3AAB91A6233B953C005FC0B2 /* SwiftUI.framework */,
 				3ADA9CC3218CDAA1001D2C30 /* Pods_KlassenAppD.framework */,
 				3ADA9CC1218CDA75001D2C30 /* FirebaseDatabase.framework */,
 				3ADA9CBF218CDA35001D2C30 /* FirebaseCore.framework */,
@@ -660,11 +684,13 @@
 			files = (
 				3A0F571B207BD0B700D9F701 /* LaunchScreen.storyboard in Resources */,
 				3A19530622648F95006C4FC5 /* colors.json in Resources */,
+				3A165A34233A7DB2007C7841 /* stundenplanColors.json in Resources */,
 				3A12FAC42125856700276495 /* GoogleService-Info.plist in Resources */,
 				3A0F5718207BD0B700D9F701 /* Assets.xcassets in Resources */,
 				3A6D0B3922F0613E00A0126D /* PinkOrangeHoch9D.png in Resources */,
 				3A82CDE8218E0CC2009DE910 /* Main.storyboard in Resources */,
 				3A5B114322F061160030BC3F /* CurrentIcon.png in Resources */,
+				3A165A35233A7DB2007C7841 /* stundenplanTimes.json in Resources */,
 				3A6D0B3722F0613900A0126D /* BlueGreenQuer9D.png in Resources */,
 				3A6D0B3B22F0614300A0126D /* RedYellowQuer9D.png in Resources */,
 			);
@@ -841,12 +867,14 @@
 				3AABCEE8216503FC00395E99 /* MGSwipeButton.m in Sources */,
 				3A0F570F207BD0B700D9F701 /* AppDelegate.swift in Sources */,
 				3A2FDB95231F0506002068FE /* AllNewEventsViewController.swift in Sources */,
+				3A165A30233A7B0F007C7841 /* TimeTableSwiftUIView.swift in Sources */,
 				3A1EA23E2326B67E00D3006F /* NewHomeViewController.swift in Sources */,
 				3A6B2C2422A1940900EBB792 /* HwRequestLogViewController.swift in Sources */,
 				3A8932B7229858FC000E6395 /* PlansViewController.swift in Sources */,
 				3ABFEF28207CE8AA00900935 /* SettingsViewController.swift in Sources */,
 				3AC1E9922261E7390048030A /* UIViewController+Utils.swift in Sources */,
 				3ADF16FA22414B660087217A /* HomeViewController.swift in Sources */,
+				3A165A37233A7EE2007C7841 /* StundenplanClass.swift in Sources */,
 				3AC1E9932261E7390048030A /* UIVIew+Utils.swift in Sources */,
 				3A0AA43B215D13CB00458415 /* RememberViewController.swift in Sources */,
 				3A0F5711207BD0B700D9F701 /* HomeworkViewController.swift in Sources */,
