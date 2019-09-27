@@ -21,6 +21,22 @@ import SwiftyJSON
     final class StundenplanClass: ObservableObject {
         let objectWillChange = ObservableObjectPublisher()
         
+    var ABWeek: String = "" {
+            willSet {
+                DispatchQueue.main.async {
+                    self.objectWillChange.send()
+                }
+            }
+        }
+    
+    var ABWeek_Date: String = "" {
+        willSet {
+            DispatchQueue.main.async {
+                self.objectWillChange.send()
+            }
+        }
+    }
+    
         var allDays: [singleStundenDay] = [] {
             willSet {
                 DispatchQueue.main.async {
@@ -112,6 +128,14 @@ import SwiftyJSON
             let ref: DatabaseReference = Database.database().reference()
             var days:[dayPack] = [dayPack(name: "monday", short: "Mo"), dayPack(name: "tuesday", short: "Di"), dayPack(name: "wednesday", short: "Mi"), dayPack(name: "thursday", short: "Do"), dayPack(name: "friday", short: "Fr")]
             
+            ref.child("stundenplan_new").child("current_week").observe(.value) { (snapshot) in
+                self.ABWeek = snapshot.value as! String
+            }
+            
+            ref.child("stundenplan_new").child("current_week_date").observe(.value) { (snapshot) in
+                self.ABWeek_Date = snapshot.value as! String
+            }
+            
             for day in days {
                 let stdRef = ref.child("stundenplan_new").child("week-a")
                 var superArray:[singleStunde] = []
@@ -164,6 +188,14 @@ import SwiftyJSON
         databasekeys.removeAll()
         let ref: DatabaseReference = Database.database().reference()
         var days:[dayPack] = [dayPack(name: "monday", short: "Mo"), dayPack(name: "tuesday", short: "Di"), dayPack(name: "wednesday", short: "Mi"), dayPack(name: "thursday", short: "Do"), dayPack(name: "friday", short: "Fr")]
+        
+        ref.child("stundenplan_new").child("current_week").observe(.value) { (snapshot) in
+            self.ABWeek = snapshot.value as! String
+        }
+        
+        ref.child("stundenplan_new").child("current_week_date").observe(.value) { (snapshot) in
+            self.ABWeek_Date = snapshot.value as! String
+        }
         
         for day in days {
             var stdRef: DatabaseReference

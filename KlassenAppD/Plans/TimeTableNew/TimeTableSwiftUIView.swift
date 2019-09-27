@@ -40,6 +40,14 @@
                 /*Picker(selection: $selectedWeek, label: Text("Hi")) {
                     Text("Woche A")
                 }.pickerStyle(SegmentedPickerStyle())*/
+                HStack {
+                    Text("Aktuelle Woche: \(StundenplanController.ABWeek)").bold()
+                    Spacer()
+                }.padding(.leading)
+                HStack {
+                    Text("Woche: \(StundenplanController.ABWeek_Date)").foregroundColor(.secondary)
+                    Spacer()
+                }.padding(.leading)
                 ScrollView {
                     HStack {
                         ForEach(StundenplanController.allDays, id: \.self) { day in
