@@ -32,13 +32,16 @@ class PlansViewController: UIViewController {
     }
     
     @IBAction func TimeTableBtnAction(_ sender: Any) {
-        if #available(iOS 13, *) {
+        
+        presentStork(controller: TimeTableNewViewController())
+        
+        /*if #available(iOS 13, *) {
             present(UIHostingController(rootView: TimeTableSwiftUIView()), animated: true, completion: nil)
             //presentStork(controller: UIHostingController(rootView: TimeTableSwiftUIView()))
         }
         else {
             presentStork(controller: TimeTableNewViewController())
-        }
+        }*/
     }
     
     func presentStork(controller: UIViewController) {

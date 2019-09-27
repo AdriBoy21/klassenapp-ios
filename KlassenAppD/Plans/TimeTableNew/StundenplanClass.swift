@@ -5,7 +5,7 @@
 //  Created by Adrian Baumgart on 18.09.19.
 //  Copyright © 2019 Adrian Baumgart. All rights reserved.
 //
-
+/*
 import AppCenter
 import AppCenterAnalytics
 import AppCenterCrashes
@@ -366,3 +366,4 @@ import SwiftyJSON
 #endif
 #endif
 
+*/

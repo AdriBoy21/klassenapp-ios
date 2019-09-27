@@ -203,7 +203,7 @@ class EventsNewViewController: UIViewController, UITableViewDelegate, UITableVie
         let ref: DatabaseReference
         ref = Database.database().reference()
         
-        ref.child("arbeiten").child("listi").observe(.value) { snapshot in
+        ref.child("arbeiten").child("list").observe(.value) { snapshot in
             
             databasekeys.removeAll()
             self.allEvents.removeAll()

@@ -5,6 +5,8 @@
 //  Created by Adrian Baumgart on 24.09.19.
 //  Copyright © 2019 Adrian Baumgart. All rights reserved.
 //
+
+/*
 #if canImport(SwiftUI)
     import SwiftUI
 
@@ -183,3 +185,4 @@ struct singleStunde: Hashable {
     var week: String
 }
 #endif
+*/

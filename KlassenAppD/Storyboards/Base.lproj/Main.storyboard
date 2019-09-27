@@ -362,7 +362,7 @@ teilnehmen</string>
             <objects>
                 <viewController storyboardIdentifier="TestsShortID" modalPresentationStyle="fullScreen" id="8rJ-Kc-sve" customClass="EventsViewController" customModule="KlassenAppD" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CT9-Sp-ht0">
@@ -389,7 +389,7 @@ teilnehmen</string>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zdz-Nk-SKR">
-                                <rect key="frame" x="16" y="233" width="343" height="67"/>
+                                <rect key="frame" x="16" y="240" width="343" height="69"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
@@ -405,7 +405,7 @@ teilnehmen</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Wh-on-IA8">
-                                <rect key="frame" x="16" y="149" width="343" height="63"/>
+                                <rect key="frame" x="16" y="154" width="343" height="65"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
@@ -421,7 +421,7 @@ teilnehmen</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ftU-Ys-liD">
-                                <rect key="frame" x="16" y="413" width="343" height="63"/>
+                                <rect key="frame" x="16" y="426" width="343" height="65"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
@@ -437,7 +437,7 @@ teilnehmen</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mkk-Hi-lgx">
-                                <rect key="frame" x="16" y="503" width="343" height="65"/>
+                                <rect key="frame" x="16" y="519" width="343" height="67"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
@@ -453,7 +453,7 @@ teilnehmen</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chc-nV-0ul">
-                                <rect key="frame" x="16" y="326" width="343" height="63"/>
+                                <rect key="frame" x="16" y="336" width="343" height="65"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
@@ -509,7 +509,7 @@ teilnehmen</string>
                     <connections>
                         <segue destination="HVT-dh-EEg" kind="relationship" relationship="viewControllers" id="3kJ-QT-1kY"/>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="MAr-px-yhH"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="QDT-Yo-MFa"/>
+                        <segue destination="1OP-a6-dbc" kind="relationship" relationship="viewControllers" id="gne-Ql-ncb"/>
                         <segue destination="hTs-bb-JAd" kind="relationship" relationship="viewControllers" id="WLN-Nx-zuB"/>
                         <segue destination="TOY-2R-H9J" kind="relationship" relationship="viewControllers" id="hPV-EE-VJW"/>
                     </connections>
@@ -885,7 +885,7 @@ teilnehmen</string>
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="1OP-a6-dbc" customClass="EventsNewViewController" customModule="KlassenAppD" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SBP-cw-ZxV">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lkb-JG-VDT">
@@ -911,16 +911,15 @@ teilnehmen</string>
                                     <constraint firstAttribute="height" constant="3" id="Liw-Xe-dsn"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Cx0-pq-suF">
-                                <rect key="frame" x="0.0" y="127" width="414" height="632"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Cx0-pq-suF">
+                                <rect key="frame" x="0.0" y="127" width="375" height="471"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="supercell" textLabel="3ps-hP-Q09" detailTextLabel="IFH-Ke-uYE" rowHeight="69" style="IBUITableViewCellStyleSubtitle" id="DPs-4r-OTi">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="69"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="69"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DPs-4r-OTi" id="ibS-id-22V">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="69"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3ps-hP-Q09">
@@ -949,11 +948,15 @@ teilnehmen</string>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Cx0-pq-suF" firstAttribute="bottom" secondItem="nwa-NA-3eb" secondAttribute="bottom" id="6JG-6I-ZRq"/>
+                            <constraint firstItem="Cx0-pq-suF" firstAttribute="top" secondItem="BxX-6p-AWX" secondAttribute="bottom" constant="8" id="8eJ-we-lw3"/>
                             <constraint firstAttribute="trailing" secondItem="BxX-6p-AWX" secondAttribute="trailing" id="Chf-9Y-3pa"/>
                             <constraint firstItem="BxX-6p-AWX" firstAttribute="leading" secondItem="SBP-cw-ZxV" secondAttribute="leading" id="DKc-N7-qna"/>
                             <constraint firstItem="BxX-6p-AWX" firstAttribute="top" secondItem="lkb-JG-VDT" secondAttribute="bottom" id="FIp-pj-pym"/>
+                            <constraint firstItem="Cx0-pq-suF" firstAttribute="trailing" secondItem="nwa-NA-3eb" secondAttribute="trailing" id="Q0i-VG-9El"/>
                             <constraint firstItem="lkb-JG-VDT" firstAttribute="top" secondItem="SBP-cw-ZxV" secondAttribute="top" id="Y8G-VV-aSC"/>
                             <constraint firstItem="lkb-JG-VDT" firstAttribute="trailing" secondItem="nwa-NA-3eb" secondAttribute="trailing" id="gyA-Zs-e5R"/>
+                            <constraint firstItem="Cx0-pq-suF" firstAttribute="leading" secondItem="nwa-NA-3eb" secondAttribute="leading" id="hra-aB-PiH"/>
                             <constraint firstItem="lkb-JG-VDT" firstAttribute="leading" secondItem="nwa-NA-3eb" secondAttribute="leading" id="ma7-2a-drx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nwa-NA-3eb"/>
@@ -968,7 +971,7 @@ teilnehmen</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rsq-hw-afd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1330.4347826086957" y="529.6875"/>
+            <point key="canvasLocation" x="1330.4000000000001" y="529.38530734632684"/>
         </scene>
     </scenes>
     <resources>

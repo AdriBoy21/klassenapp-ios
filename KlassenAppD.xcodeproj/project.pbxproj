@@ -42,7 +42,6 @@
 		3A82CDE8218E0CC2009DE910 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A82CDE6218E0CC2009DE910 /* Main.storyboard */; };
 		3A8932B7229858FC000E6395 /* PlansViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8932B6229858FC000E6395 /* PlansViewController.swift */; };
 		3AA4A90F21D64FD6000240CC /* AppInfosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA4A90E21D64FD6000240CC /* AppInfosViewController.swift */; };
-		3AAB91A7233B953C005FC0B2 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AAB91A6233B953C005FC0B2 /* SwiftUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3AABCEE7216503FC00395E99 /* MGSwipeTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AABCEE1216503FB00395E99 /* MGSwipeTableCell.m */; };
 		3AABCEE8216503FC00395E99 /* MGSwipeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AABCEE4216503FB00395E99 /* MGSwipeButton.m */; };
 		3AB1BCD622A1B90000A7FCE7 /* UIScrollView+EmptyDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB1BCD522A1B90000A7FCE7 /* UIScrollView+EmptyDataSet.m */; };
@@ -221,7 +220,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AAB91A7233B953C005FC0B2 /* SwiftUI.framework in Frameworks */,
 				26B178ED3608636E528082D0 /* Pods_KlassenAppD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -549,7 +547,6 @@
 				7A512F6820D6789D007138D3 /* Embed App Extensions */,
 				7AC9A3D620DEAD6800BD19B3 /* Embed Watch Content */,
 				7A2F26EF20F7812200FD97CD /* ShellScript */,
-				3A8F67C8212594D800CA4BFC /* Increase Build Number */,
 			);
 			buildRules = (
 			);
@@ -727,20 +724,6 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
-		};
-		3A8F67C8212594D800CA4BFC /* Increase Build Number */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Increase Build Number";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nbuildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n";
 		};
 		75B452B4C72CC8F83785C5DF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1006,13 +989,13 @@
 				CODE_SIGN_ENTITLEMENTS = KlassenAppD/KlassenAppD.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1569601559;
+				CURRENT_PROJECT_VERSION = 1569604190;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = G8434KY9GR;
 				INFOPLIST_FILE = KlassenAppD/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 5.0.1;
+				MARKETING_VERSION = "5.1.0 Beta 1";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.adrianbaumgart.KlassenAppDREA1234;
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME)";
@@ -1137,13 +1120,13 @@
 				CODE_SIGN_ENTITLEMENTS = KlassenAppD/KlassenAppD.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1569601559;
+				CURRENT_PROJECT_VERSION = 1569604190;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = G8434KY9GR;
 				INFOPLIST_FILE = KlassenAppD/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 5.0.1;
+				MARKETING_VERSION = "5.1.0 Beta 1";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adrianbaumgart.KlassenAppDREA1234;
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
