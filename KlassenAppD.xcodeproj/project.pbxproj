@@ -1006,6 +1006,7 @@
 				CODE_SIGN_ENTITLEMENTS = KlassenAppD/KlassenAppD.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1569601559;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = G8434KY9GR;
 				INFOPLIST_FILE = KlassenAppD/Info.plist;
@@ -1136,6 +1137,7 @@
 				CODE_SIGN_ENTITLEMENTS = KlassenAppD/KlassenAppD.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1569601559;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = G8434KY9GR;
 				INFOPLIST_FILE = KlassenAppD/Info.plist;
