@@ -445,7 +445,7 @@ class NewHomeViewController: UIViewController, UITableViewDelegate, UITableViewD
                                                     betaText = "Es ist kein Update verfügbar."
                                                 }
                                                 
-                                                self.allHomeEntries.append(homeEntry(title: "Appupdate", content: "-Release: \(releaseText)\n\n-Beta: \(betaText )", sorter: 6))
+                                                self.allHomeEntries.append(homeEntry(title: "Appupdate", content: "\(releaseText)", sorter: 6))
                                             }
                                         }
                                         

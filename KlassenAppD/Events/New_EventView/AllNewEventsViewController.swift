@@ -109,10 +109,14 @@ class AllNewEventsViewController: UIViewController {
             self.navigationbar.titleLabel.text = DateLE
         }
         
-        ref.child("arbeiten").child("list").child(TestVC.selectedEventID).child("description").observe(.value) { TestsSnap in
-            let TestsLE = TestsSnap.value as? String
-            self.teststextview.text = TestsLE
+        ref.child("arbeiten").child("list").child(TestVC.selectedEventID).child("formattedDate").observe(.value) { (datesnapp) in
+            let DateLE = datesnapp.value as? String
+            ref.child("arbeiten").child("list").child(TestVC.selectedEventID).child("description").observe(.value) { TestsSnap in
+                let TestsLE = TestsSnap.value as? String
+                self.teststextview.text = "Datum: \(DateLE!)\n\n\n\(TestsLE!)"
+            }
         }
+        
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
