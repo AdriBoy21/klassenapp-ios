@@ -103,6 +103,7 @@ class EventsNewViewController: UIViewController, UITableViewDelegate, UITableVie
                     self.tabBarController!.tabBar.barTintColor = self.style.darkBarTintColor
                     self.tabBarController!.tabBar.tintColor = self.style.darkTintColor
                     setNeedsStatusBarAppearanceUpdate()
+                    eventsTableView.reloadData()
                 }
                 else if traitCollection.userInterfaceStyle == .light || traitCollection.userInterfaceStyle == .unspecified {
                     view.backgroundColor = style.lightBackground
@@ -112,6 +113,7 @@ class EventsNewViewController: UIViewController, UITableViewDelegate, UITableVie
                     self.tabBarController!.tabBar.barTintColor = self.style.lightBarTintColor
                     self.tabBarController!.tabBar.tintColor = self.style.lightTintColor
                     setNeedsStatusBarAppearanceUpdate()
+                    eventsTableView.reloadData()
                 }
             }
         }
@@ -203,7 +205,7 @@ class EventsNewViewController: UIViewController, UITableViewDelegate, UITableVie
         let ref: DatabaseReference
         ref = Database.database().reference()
         
-        ref.child("arbeiten").child("listi").observe(.value) { snapshot in
+        ref.child("arbeiten").child("list").observe(.value) { snapshot in
             
             databasekeys.removeAll()
             self.allEvents.removeAll()

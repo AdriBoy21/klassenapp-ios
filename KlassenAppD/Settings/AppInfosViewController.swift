@@ -17,7 +17,7 @@ class AppInfosViewController: UIViewController, UITableViewDelegate, UITableView
     
     var style = Appearances()
     
-    var n1: [String] = ["Appname: KlassenApp", "Bundle-Identifier: \(AppInfoPublic.bundleid!)", "Appversion: \(AppInfoPublic.version) (Build: \(AppInfoPublic.build))", "Website: https://klassenappd.de", "Email-Adresse: mail@klassenappd.de", "Erstveröffentlichung: 19.Juli 2018", "App-Entwickler: Adrian Baumgart", "Datenbank: Firebase Database", "© Adrian Baumgart, 2018 - 2019"]
+    var n1: [String] = ["Appname: KlassenApp", "Bundle-Identifier: \(AppInfoPublic.bundleid!)", "Appversion: \(AppInfoPublic.version) (Build: \(AppInfoPublic.build)) [\(AppInfoPublic.versionType)]", "Website: https://klassenappd.de", "E-Mail-Adresse: mail@klassenappd.de", "Erstveröffentlichung: 19.Juli 2018", "App-Entwickler: Adrian Baumgart", "Datenbank: Firebase Database", "© Adrian Baumgart, 2018 - 2019"]
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return n1.count
@@ -59,6 +59,10 @@ class AppInfosViewController: UIViewController, UITableViewDelegate, UITableView
         return cell!
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        loadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -89,10 +93,41 @@ class AppInfosViewController: UIViewController, UITableViewDelegate, UITableView
         view.addSubview(InfoTV!)
         
         changeAppearance()
+        loadData()
         
         InfoTV.allowsSelection = false
         InfoTV.estimatedRowHeight = 85
         InfoTV.rowHeight = UITableView.automaticDimension
+    }
+    
+    func loadData() {
+        let ref: DatabaseReference = Database.database().reference()
+        
+        ref.child("versions").child("ios").child("releases").child("all_releases").observe(.value) { (snapshot) in
+            if snapshot.hasChild(Bundle.main.infoDictionary!["CFBundleVersion"] as! String) {
+                // RELEASE
+                AppInfoPublic.versionType = "Release"
+                self.n1 = ["Appname: KlassenApp", "Bundle-Identifier: \(AppInfoPublic.bundleid!)", "Appversion: \(AppInfoPublic.version) (Build: \(AppInfoPublic.build)) [\(AppInfoPublic.versionType)]", "Website: https://klassenappd.de", "E-Mail-Adresse: mail@klassenappd.de", "Erstveröffentlichung: 19.Juli 2018", "App-Entwickler: Adrian Baumgart", "Datenbank: Firebase Database", "© Adrian Baumgart, 2018 - 2019"]
+                self.InfoTV.reloadData()
+            }
+            else {
+                ref.child("versions").child("ios").child("betas").child("all_betas").observe(.value) { (snapshoti) in
+                    if snapshoti.hasChild(Bundle.main.infoDictionary!["CFBundleVersion"] as! String) {
+                        // BETA
+                        AppInfoPublic.versionType = "Beta"
+                        self.n1 = ["Appname: KlassenApp", "Bundle-Identifier: \(AppInfoPublic.bundleid!)", "Appversion: \(AppInfoPublic.version) (Build: \(AppInfoPublic.build)) [\(AppInfoPublic.versionType)]", "Website: https://klassenappd.de", "E-Mail-Adresse: mail@klassenappd.de", "Erstveröffentlichung: 19.Juli 2018", "App-Entwickler: Adrian Baumgart", "Datenbank: Firebase Database", "© Adrian Baumgart, 2018 - 2019"]
+                        self.InfoTV.reloadData()
+                    }
+                    else {
+                        //UNIDENFIED
+                        
+                        AppInfoPublic.versionType = "Not identifiable"
+                        self.n1 = ["Appname: KlassenApp", "Bundle-Identifier: \(AppInfoPublic.bundleid!)", "Appversion: \(AppInfoPublic.version) (Build: \(AppInfoPublic.build)) [\(AppInfoPublic.versionType)]", "Website: https://klassenappd.de", "E-Mail-Adresse: mail@klassenappd.de", "Erstveröffentlichung: 19.Juli 2018", "App-Entwickler: Adrian Baumgart", "Datenbank: Firebase Database", "© Adrian Baumgart, 2018 - 2019"]
+                        self.InfoTV.reloadData()
+                    }
+                }
+            }
+        }
     }
     
     func changeAppearance() {
@@ -154,6 +189,7 @@ class AppInfosViewController: UIViewController, UITableViewDelegate, UITableView
         static var dictionary = Bundle.main.infoDictionary!
         static var version = dictionary["CFBundleShortVersionString"] as! String
         static var build = dictionary["CFBundleVersion"] as! String
+        static var versionType = "..."
         static var bundleid = Bundle.main.bundleIdentifier
         static var database = "Laden..."
     }

@@ -227,10 +227,11 @@ class NewHomeViewController: UIViewController, UITableViewDelegate, UITableViewD
     func loadUpdateAlert() {
         let ref: DatabaseReference = Database.database().reference()
         
-        ref.child("standardData").child("iosCurrentVer").child("build").observeSingleEvent(of: .value) { (snapshot1) in
-            ref.child("standardData").child("iosCurrentVer").child("versionnumber").observeSingleEvent(of: .value) { (snapshot2) in
-                ref.child("standardData").child("iosCurrentVer").child("description").observeSingleEvent(of: .value) { (snapshot3) in
-                    ref.child("standardData").child("iosCurrentVer").child("UpdateLink").observeSingleEvent(of: .value) { (snapshot4) in
+        let updateRef = ref.child("versions").child("ios").child("releases").child("latest_release")
+        updateRef.child("build").observeSingleEvent(of: .value) { (snapshot1) in
+            updateRef.child("version").observeSingleEvent(of: .value) { (snapshot2) in
+                updateRef.child("description").observeSingleEvent(of: .value) { (snapshot3) in
+                    updateRef.child("link").observeSingleEvent(of: .value) { (snapshot4) in
                         let dictionary = Bundle.main.infoDictionary!
                         let buildCurrent = dictionary["CFBundleVersion"] as? String
                         let build = Int(buildCurrent!)
@@ -417,18 +418,35 @@ class NewHomeViewController: UIViewController, UITableViewDelegate, UITableViewD
                                 else {
                                     self.allHomeEntries.append(homeEntry(title: "Essen heute", content: "Kein Essen heute, es ist Wochenende!", sorter: 5))
                                 }
-                                ref.child("standardData").child("iosCurrentVer").child("build").observeSingleEvent(of: .value) { (snapshot6_1) in
-                                    ref.child("standardData").child("iosCurrentVer").child("versionnumber").observeSingleEvent(of: .value) { (snapshot6_2) in
+                                ref.child("versions").child("ios").child("releases").child("latest_release").child("build").observeSingleEvent(of: .value) { (snapshot6_1) in
+                                    ref.child("versions").child("ios").child("releases").child("latest_release").child("version").observeSingleEvent(of: .value) { (snapshot6_2) in
                                         
-                                        let dictionary = Bundle.main.infoDictionary!
-                                        let buildCurrent = dictionary["CFBundleVersion"] as? String
-                                        let build = Int(buildCurrent!)
-                                        
-                                        if snapshot6_1.value as! Int > build! {
-                                            self.allHomeEntries.append(homeEntry(title: "Appupdate", content: "Ein Update auf die Version \(snapshot6_2.value as! String) ist verfügbar.", sorter: 6))
-                                        }
-                                        else {
-                                            self.allHomeEntries.append(homeEntry(title: "Appupdate", content: "Es ist kein Update verfügbar. Du benutzt bereits die neuste Version! 👍", sorter: 6))
+                                        ref.child("versions").child("ios").child("betas").child("latest_beta").child("build").observeSingleEvent(of: .value) { (snapshot6_3) in
+                                            ref.child("versions").child("ios").child("betas").child("latest_beta").child("version").observeSingleEvent(of: .value) { (snapshot6_4) in
+                                                
+                                                let dictionary = Bundle.main.infoDictionary!
+                                                let buildCurrent = dictionary["CFBundleVersion"] as? String
+                                                let build = Int(buildCurrent!)
+                                                
+                                                var releaseText = ""
+                                                var betaText = ""
+                                                
+                                                if snapshot6_1.value as! Int > build! {
+                                                    releaseText = "Ein Update auf die Version \(snapshot6_2.value as! String) ist verfügbar."
+                                                }
+                                                else {
+                                                    releaseText = "Es ist kein Update verfügbar. Du benutzt bereits die neuste Version! 👍"
+                                                }
+                                                
+                                                if snapshot6_3.value as! Int > build! {
+                                                    betaText = "Ein Update auf die Beta \(snapshot6_4.value as! String) ist verfügbar. Gehe in die Beta-App oder melde dich, wenn du an der Beta teilnehmen möchtest, in den Einstellungen an."
+                                                }
+                                                else {
+                                                    betaText = "Es ist kein Update verfügbar."
+                                                }
+                                                
+                                                self.allHomeEntries.append(homeEntry(title: "Appupdate", content: "\(releaseText)", sorter: 6))
+                                            }
                                         }
                                         
                                         ref.child("homework").child("Week1").child("Datum").observeSingleEvent(of: .value) { (snapshot7_1) in

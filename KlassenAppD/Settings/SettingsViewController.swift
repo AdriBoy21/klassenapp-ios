@@ -86,7 +86,22 @@ class SettingsViewController: UIViewController {
     @IBAction func ChangeColor(_ sender: Any) {
            self.presentStork(controller: ChangeColorFullViewController())
     }
-
+    
+    @IBAction func ApplyForBeta(_ sender: Any) {
+        let ref: DatabaseReference = Database.database().reference()
+        
+        ref.child("standardData").child("iosCurrentVer").child("betaLink").observeSingleEvent(of: .value) { (snapshot) in
+            let link = snapshot.value as! String
+            
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(URL(string: link)!)
+            }
+            else {
+                UIApplication.shared.openURL(URL(string: link)!)
+            }
+        }
+    }
+    
     @IBAction func InformationForRequestsAction(_ sender: Any) {
         if #available(iOS 10.0, *) {
             UIApplication.shared.open(URL(string: "https://klassenappd.de/wiki/hausaufgabenanfragen.html")!)
