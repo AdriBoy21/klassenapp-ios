@@ -971,7 +971,7 @@
 				INFOPLIST_FILE = KlassenAppD/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = "5.1.0 Beta 1";
+				MARKETING_VERSION = 5.1.0;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.adrianbaumgart.KlassenAppDREA1234;
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME)";
@@ -1102,7 +1102,7 @@
 				INFOPLIST_FILE = KlassenAppD/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = "5.1.0 Beta 1";
+				MARKETING_VERSION = 5.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.adrianbaumgart.KlassenAppDREA1234;
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
