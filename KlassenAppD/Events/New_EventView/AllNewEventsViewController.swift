@@ -113,7 +113,7 @@ class AllNewEventsViewController: UIViewController {
             let DateLE = datesnapp.value as? String
             ref.child("arbeiten").child("list").child(TestVC.selectedEventID).child("description").observe(.value) { TestsSnap in
                 let TestsLE = TestsSnap.value as? String
-                self.teststextview.text = "Datum: \(DateLE!)\n\n\n\(TestsLE!)"
+                self.teststextview.text = "Datum: \(DateLE!)\n\n\n\(TestsLE!)\n\n\n\n\n\n\nEvent-ID: \(TestVC.selectedEventID)"
             }
         }
         
