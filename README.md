@@ -1,9 +1,13 @@
 # klassenapp-ios
 The old iOS Version of the KlassenApp (there is a new app now, this app is not used anymore)
 
-## Usage:
+## Usage
 This app was programmed for a school class to have an overview over homework, tests, etc. quickly.
-## Used Libraries (CocoaPods):
+
+## Disclaimer
+This app is really bad written code and looking back to it I would've changed many many things. This was my first app and first experiences with app development & Swift.
+
+## Used Libraries (CocoaPods)
 1. Firebase (Core/Database/Performance) - Google (https://firebase.google.com/)
 2. Fabric - Fabric (https://get.fabric.io/)
 3. Crashlytics - Fabric (https://get.fabric.io/)
@@ -21,9 +25,12 @@ This app was programmed for a school class to have an overview over homework, te
 15. SCLAlertView - vikmeup (https://github.com/vikmeup/SCLAlertView-Swift)
 16. SwiftyJSON - SwiftyJSON (https://github.com/SwiftyJSON/SwiftyJSON)
 
-## Code of Conduct / Contribute:
-There's no need to contribute, this app is dead ;) But feedback is appreciated
-## License:
+## Code of Conduct / Contribute
+There's no need to contribute, this app is essentially dead ;)
+
+## License
 This project is protected by the following license: GNU Affero General Public License v3.0 (GNU AGPLv3). More information can be found in the file "LICENSE".
 
-## If something is not working or if you have a question, please feel free to contact me via Mail: [developer@adrianbaumgart.de](mailto:developer@adrianbaumgart.de).
+## Contact
+If something is not working or if you have a question, you can contact me via Mail:
+[developer@adrianbaumgart.de](mailto:developer@adrianbaumgart.de).
